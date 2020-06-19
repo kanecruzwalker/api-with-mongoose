@@ -1,0 +1,25 @@
+{
+  "name": "api-with-mongoose",
+  "version": "1.0.0",
+  "description": "Creating RESTful API with Mongoose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanercruzwalker/api-with-mongoose.git"
+  },
+  "author": "Kane RCW",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanercruzwalker/api-with-mongoose/issues"
+  },
+  "homepage": "https://github.com/kanercruzwalker/api-with-mongoose#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19"
+  }
+}
