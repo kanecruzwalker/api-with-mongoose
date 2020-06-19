@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const mongoogse = require("mongoose");
+const mongoose = require("mongoose");
 
 const app = express();
 
@@ -12,6 +12,21 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
+
+mongoose.connect("mongodb://localhost:27017/wikiDB", {useNewUrlParser: true, useUnifiedTopology: true });
+
+const articleSchema = {
+    title: {
+      type: String, 
+      requried: true
+    },
+    content: {
+      type: String,
+      required: true
+    }
+  }
+
+  const Article = mongoose.model("Article", articleSchema);
 
 app.listen(3000, function(){
     console.log("Server started on port 3000");
